@@ -1,6 +1,7 @@
-Changes in Release X.X.X
+Changes in Release 1.4.2
 ==============================================
 [JOWS-26] - KeyIdentifierMarshaller uses an incorrect attribute name
+[JOWS-27] - BaseMessageDecoder logging of protocol messages assumes a DOM
 
 Changes in Release 1.4.1
 ==============================================

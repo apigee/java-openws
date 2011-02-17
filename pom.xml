@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.opensaml</groupId>
     <artifactId>openws</artifactId>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
     <packaging>jar</packaging>
 
     <name>OpenWS</name>
@@ -429,7 +429,7 @@
             <id>cantor</id>
             <name>Scott Cantor</name>
             <organization>The Ohio State University</organization>
-            <organizationUrl>http://www.ohio-state.edu/</organizationUrl>
+            <organizationUrl>http://www.osu.edu/</organizationUrl>
             <roles>
                 <role>developer</role>
             </roles>
@@ -448,13 +448,13 @@
         <developer>
             <id>lajoie</id>
             <name>Chad La Joie</name>
-            <organization>SWITCH</organization>
-            <organizationUrl>http://www.switch.ch/</organizationUrl>
+            <organization>Itumi, Ltd</organization>
+            <organizationUrl>http://www.itumi.biz/</organizationUrl>
             <roles>
                 <role>developer</role>
                 <role>documentation</role>
             </roles>
-            <timezone>+1</timezone>
+            <timezone>-5</timezone>
         </developer>
         <developer>
             <id>putmanb</id>
