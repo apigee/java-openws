@@ -3,6 +3,7 @@ Changes in Release 1.4.2
 [JOWS-26] - KeyIdentifierMarshaller uses an incorrect attribute name
 [JOWS-27] - BaseMessageDecoder logging of protocol messages assumes a DOM
 [JOWS-29] - Some pom changes for OpenWS
+[JOWS-30] - Update POM for Shib.net Repo and attach generated Javadocs
 
 Changes in Release 1.4.1
 ==============================================
