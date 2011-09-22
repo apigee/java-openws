@@ -10,7 +10,7 @@
     </formats>
     
     <dependencySets>
-        <<dependencySet>
+        <dependencySet>
             <outputDirectory>/lib</outputDirectory>
             <directoryMode>774</directoryMode>
             <fileMode>444</fileMode>

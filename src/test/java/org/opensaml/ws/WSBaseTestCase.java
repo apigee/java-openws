@@ -110,6 +110,7 @@ public abstract class WSBaseTestCase extends XMLTestCase {
     protected void createParser() {
         parser_= new BasicParserPool();
         parser_.setNamespaceAware(true);
+        Configuration.setParserPool(parser_);
     }
 
     @SuppressWarnings("unchecked")

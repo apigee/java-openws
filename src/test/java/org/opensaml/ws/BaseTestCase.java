@@ -63,6 +63,7 @@ public abstract class BaseTestCase extends XMLTestCase {
         
         parserPool = new BasicParserPool();
         parserPool.setNamespaceAware(true);
+        Configuration.setParserPool(parserPool);
 
         Class clazz = BaseTestCase.class;
         try {
