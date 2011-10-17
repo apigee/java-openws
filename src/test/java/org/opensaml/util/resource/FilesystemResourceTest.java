@@ -82,6 +82,6 @@ public class FilesystemResourceTest extends TestCase {
         assertEquals(realResrc, resource.getLocation());
 
         resource = new FilesystemResource("/foo");
-        assertEquals("/foo", resource.getLocation());
+        assertEquals(new File("/foo").getCanonicalPath(), resource.getLocation());
     }
 }
