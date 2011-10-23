@@ -1,5 +1,6 @@
 Changes in Release 1.4.3
 ==============================================
+[JOWS-31] - Failed test on Windows: testGetLocation(org.opensaml.util.resource.FilesystemResourceTest): expected:</...> but was:<C:\...>
 [JOWS-32] - Inconsitency in getStatusCode result in HttpServletRequestAdapter
 
 Changes in Release 1.4.2
@@ -9,7 +10,6 @@ Changes in Release 1.4.2
 [JOWS-28] - SOAP11Encoder doesn't encode original SOAP message
 [JOWS-29] - Some pom changes for OpenWS
 [JOWS-30] - Update POM for Shib.net Repo and attach generated Javadocs
-[JOWS-31] - Failed test on Windows: testGetLocation(org.opensaml.util.resource.FilesystemResourceTest): expected:</...> but was:<C:\...>
 
 Changes in Release 1.4.1
 ==============================================
