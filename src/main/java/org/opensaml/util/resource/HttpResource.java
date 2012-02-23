@@ -81,6 +81,7 @@ public class HttpResource extends AbstractFilteredResource {
     /** {@inheritDoc} */
     public boolean exists() throws ResourceException {
         HeadMethod headMethod = new HeadMethod(resourceUrl);
+        headMethod.addRequestHeader("Connection", "close");
 
         try {
             httpClient.executeMethod(headMethod);
@@ -109,6 +110,7 @@ public class HttpResource extends AbstractFilteredResource {
     /** {@inheritDoc} */
     public DateTime getLastModifiedTime() throws ResourceException {
         HeadMethod headMethod = new HeadMethod(resourceUrl);
+        headMethod.addRequestHeader("Connection", "close");
 
         try {
             httpClient.executeMethod(headMethod);
@@ -169,6 +171,7 @@ public class HttpResource extends AbstractFilteredResource {
      */
     protected GetMethod getResource() throws ResourceException {
         GetMethod getMethod = new GetMethod(resourceUrl);
+        getMethod.addRequestHeader("Connection", "close");
 
         try {
             httpClient.executeMethod(getMethod);
