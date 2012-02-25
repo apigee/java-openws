@@ -1,7 +1,7 @@
 Changes in Release 1.4.4
 ==============================================
 [JOWS-33] - HttpResource does not properly release HTTP connnections
-[JOWS-34] - Update xmltooling library
+[JOWS-34] - Update dependencies
 
 Changes in Release 1.4.3
 ==============================================
