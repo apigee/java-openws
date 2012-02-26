@@ -17,6 +17,8 @@
 
 package org.opensaml.ws.security.provider;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.opensaml.ws.security.BaseSecurityPolicyRuleTestCase;
 import org.opensaml.ws.transport.InTransport;
 import org.opensaml.ws.transport.http.HTTPInTransport;
@@ -41,7 +43,11 @@ public class HTTPRuleTest extends BaseSecurityPolicyRuleTestCase {
         rule = new HTTPRule(contentType, method, requireSecured);
     }
     
-    /** {@inheritDoc} */
+    /**
+     * Builds a mock {@link HttpServletRequest}.
+     * 
+     * @return the mock request
+     */
     protected MockHttpServletRequest buildServletRequest() {
         MockHttpServletRequest request =  new MockHttpServletRequest();
         request.setContentType(contentType);

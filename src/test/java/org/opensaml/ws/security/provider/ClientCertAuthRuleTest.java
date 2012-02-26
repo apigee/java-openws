@@ -252,7 +252,11 @@ public class ClientCertAuthRuleTest extends BaseSecurityPolicyRuleTestCase {
                 messageContext.getInboundMessageTransport().isAuthenticated());
     }
     
-    /** {@inheritDoc} */
+    /**
+     * Builds a mock {@link HttpServletRequest}.
+     * 
+     * @return the mock request
+     */
     protected MockHttpServletRequest buildServletRequest() {
         MockHttpServletRequest request =  new MockHttpServletRequest();
         return request;
