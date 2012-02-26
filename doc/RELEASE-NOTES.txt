@@ -2,6 +2,7 @@ Changes in Release 1.4.4
 ==============================================
 [JOWS-33] - HttpResource does not properly release HTTP connnections
 [JOWS-34] - Update dependencies
+[JOWS-35] - Clean up maven assembly description
 
 Changes in Release 1.4.3
 ==============================================
