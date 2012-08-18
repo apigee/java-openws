@@ -1,6 +1,7 @@
 Changes in Release 1.4.5
 ==============================================
 [JOWS-36] - WS-Trust OnBehalfOf provider is misimplemented, should support a sequence of wildcard children rather than a single child.
+[JOWS-37] - FileBackedHttpResource does not properly read backup file, during initialization, if remote file is unreachable
 
 Changes in Release 1.4.4
 ==============================================

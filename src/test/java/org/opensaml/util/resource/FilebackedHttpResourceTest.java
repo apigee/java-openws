@@ -27,6 +27,9 @@ public class FilebackedHttpResourceTest extends TestCase {
 
     /** Path to a resource that exists. */
     private final String realResrc = "http://www.google.com";
+    
+    /** Path to a resource that does not exist. */
+    private final String unreachableURLResc = "http://shibfoo.example.com";
 
     /** Temporary backup file. */
     private final String backupFile = "unitTest.tmp";
@@ -51,6 +54,9 @@ public class FilebackedHttpResourceTest extends TestCase {
 
         resource = new FileBackedHttpResource(realResrc + "/doesNotExist", backupFile);
         assertTrue(resource.exists());
+        
+        resource = new FileBackedHttpResource(unreachableURLResc, backupFile);
+        assertTrue(resource.exists());
     }
 
     /** Tests the {@link FileBackedHttpResource#getInputStream()} method. */
@@ -61,6 +67,11 @@ public class FilebackedHttpResourceTest extends TestCase {
         assertTrue(ins.available() > 0);
 
         resource = new FileBackedHttpResource(realResrc + "/doesNotExist", backupFile);
+        ins = resource.getInputStream();
+        assertNotNull(ins);
+        assertTrue(ins.available() > 0);
+        
+        resource = new FileBackedHttpResource(unreachableURLResc, backupFile);
         ins = resource.getInputStream();
         assertNotNull(ins);
         assertTrue(ins.available() > 0);
@@ -76,6 +87,9 @@ public class FilebackedHttpResourceTest extends TestCase {
 
         resource = new FileBackedHttpResource(realResrc + "/doesNotExist", backupFile);
         assertNotNull(resource.getLastModifiedTime());
+        
+        resource = new FileBackedHttpResource(unreachableURLResc, backupFile);
+        assertNotNull(resource.getLastModifiedTime());
     }
 
     /** Tests the {@link FileBackedHttpResource#getLocation()} method. */
@@ -88,5 +102,8 @@ public class FilebackedHttpResourceTest extends TestCase {
 
         resource = new FileBackedHttpResource(realResrc + "/doesNotExist", backupFile);
         assertEquals(realResrc + "/doesNotExist", resource.getLocation());
+        
+        resource = new FileBackedHttpResource(unreachableURLResc, backupFile);
+        assertEquals(unreachableURLResc, resource.getLocation());
     }
 }
