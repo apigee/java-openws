@@ -126,7 +126,7 @@ public class FileBackedHttpResource extends HttpResource {
         try {
             httpExists = super.exists();
         } catch (ResourceException e) {
-            log.warn("HTTP resource '{}' was inaccesible for exists(), trying backing file '{}'", 
+            log.warn("HTTP resource '{}' was inaccessible for exists(), trying backing file '{}'", 
                     getLocation(), resourceFile.getAbsolutePath());
             return resourceFile.exists();
         }
@@ -151,7 +151,7 @@ public class FileBackedHttpResource extends HttpResource {
             ins = getMethod.getResponseBodyAsStream();
         } catch (Exception e) {
             try {
-                log.warn("HTTP resource '{}' was inaccesible for getInputStream(), trying backing file '{}'", 
+                log.warn("HTTP resource '{}' was inaccessible for getInputStream(), trying backing file '{}'", 
                         getLocation(), resourceFile.getAbsolutePath());
                 ins = new FileInputStream(resourceFile);
             } catch (IOException ioe) {
@@ -168,7 +168,7 @@ public class FileBackedHttpResource extends HttpResource {
         try {
             return super.getLastModifiedTime();
         } catch (ResourceException e) {
-            log.warn("HTTP resource '{}' was inaccesible for getLastModifiedTime(), trying backing file '{}'", 
+            log.warn("HTTP resource '{}' was inaccessible for getLastModifiedTime(), trying backing file '{}'", 
                     getLocation(), resourceFile.getAbsolutePath());
             long lastModifiedTime = resourceFile.lastModified();
             if (lastModifiedTime == 0) {
