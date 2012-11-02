@@ -41,10 +41,6 @@ public class SimpleURLCanonicalizerTest extends TestCase {
         
         SimpleURLCanonicalizer.registerSchemePortMapping("myscheme", 1967);
         assertEquals(new Integer(1967), SimpleURLCanonicalizer.getRegisteredPort("MyScheme"));
-        
-        assertEquals("gopher://www.example.org:70/Foo/Bar/baz", SimpleURLCanonicalizer.canonicalize("gopher://www.example.org:70/Foo/Bar/baz"));
-        SimpleURLCanonicalizer.registerSchemePortMapping("gopher", 70);
-        assertEquals("gopher://www.example.org/Foo/Bar/baz", SimpleURLCanonicalizer.canonicalize("gopher://www.example.org:70/Foo/Bar/baz"));
     }
 
 }
