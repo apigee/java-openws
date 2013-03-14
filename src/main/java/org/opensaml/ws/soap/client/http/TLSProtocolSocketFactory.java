@@ -228,17 +228,17 @@ public class TLSProtocolSocketFactory implements SecureProtocolSocketFactory {
         try {
             SSLSession sslSession = sslSocket.getSession();
             String hostname = sslSession.getPeerHost();
-        
+            
             if (!hostnameVerifier.verify(hostname, sslSession)) {
                 throw new SSLPeerUnverifiedException("SSL peer failed hostname validation for name: " + hostname);
             }
         } catch (SSLException e) {
             cleanUpFailedSocket(sslSocket);
             throw e;
-       } catch (Throwable t) {
-           // Make sure we close the socket on any kind of Exception, RuntimeException or Error.
-           cleanUpFailedSocket(sslSocket);
-           throw new SSLException("Error in hostname verification", t);
+        } catch (Throwable t) {
+            // Make sure we close the socket on any kind of Exception, RuntimeException or Error.
+            cleanUpFailedSocket(sslSocket);
+            throw new SSLException("Error in hostname verification", t);
         }
     }
     
