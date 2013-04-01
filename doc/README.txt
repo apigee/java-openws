@@ -6,10 +6,10 @@ a low level. These tools include classes for creating and reading SOAP messages,
 transport-independent clients for connecting to web services, and various 
 transports for use with those clients.
 
-OpenWS-J requires working JAXP 1.3 and DOM Level 3 compliant parsers,
-and this library requires the use of Xerces and Xalan for historical reasons.
-We recommend those libraries be endorsed using the endorsement override
-mechanism in the JVM to ensure their use.
+OpenWS-J requires a JAXP 1.3 and DOM Level 3 compliant parser, and this
+library assumes the use of Xerces and Xalan for historical reasons. You
+may choose to use the built-in parser and transform engine at your own
+risk.
 
 The use of JDK 1.6 or higher is required. Older Java versions are not
 supported.
