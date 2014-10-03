@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <groupId>net.shibboleth</groupId>
-        <artifactId>parent-v2</artifactId>
-        <version>1</version>
+        <groupId>io.apigee.opensaml</groupId>
+        <artifactId>opensaml-parent</artifactId>
+        <version>1.1</version>
     </parent>
     
-    <groupId>org.opensaml</groupId>
+    <groupId>io.apigee.opensaml</groupId>
     <artifactId>openws</artifactId>
     <version>1.5.0</version>
     <packaging>jar</packaging>
@@ -46,7 +46,7 @@
     <dependencies>
         <!-- Compile dependencies -->
         <dependency>
-            <groupId>org.opensaml</groupId>
+            <groupId>io.apigee.opensaml</groupId>
             <artifactId>xmltooling</artifactId>
             <version>1.4.0</version>
         </dependency>
@@ -79,14 +79,10 @@
         <!-- Runtime dependencies -->
         <dependency>
             <groupId>${xerces.groupId}</groupId>
-            <artifactId>xml-apis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>${xerces.groupId}</groupId>
             <artifactId>xercesImpl</artifactId>
         </dependency>
         <dependency>
-            <groupId>${xerces.groupId}</groupId>
+            <groupId>${xalan.groupId}</groupId>
             <artifactId>serializer</artifactId>
         </dependency>
         <dependency>
@@ -233,5 +229,11 @@
             </build>
         </profile>
     </profiles>
+
+    <scm>
+        <connection>scm:git:https://github.com/apigee/java-openws.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/apigee/java-openws.git</developerConnection>
+        <url>git@github.com:apigee/java-openws.git</url>
+    </scm>
     
 </project>
